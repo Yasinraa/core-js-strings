@@ -196,10 +196,12 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes() => 0
  */
 function sumOfCodes(str) {
+  if (!str) {
+    return 0;
+  }
   let sum = 0;
-  const splStr = str.toString().split('');
-  for (let i = 0; i <= splStr.length; i += 1) {
-    sum += splStr.toString().charCodeAt(i);
+  for (let i = 0; i < str.length; i += 1) {
+    sum += str.charCodeAt(i);
   }
   return sum;
 }
